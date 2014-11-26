@@ -26,8 +26,7 @@
   </head>
   <body>
    <div>next link is:  <%= "<a href='http://localhost:4567/#{@next_qr_text}'>#{@next_qr_text}</a>" %>
-   <div>a certain foon once said: "<%= @text %>"</div>
-   <div><%= @images %></div>
+   <div>instructions: open up the qr code on the bottom of the page to get closer to the big reveal. who's your dadd^H^H^H^Hsecret santa?</div>
    <table>
       <% @qr.modules.each_index do |x| %>
         <tr>
