@@ -41,13 +41,13 @@ get "/:qr_code" do
   @text = things[qr_index]
   @images = images[qr_index]
   @next_qr_text = list[qr_index + 1]
-  @qr = RQRCode::QRCode.new(@next_qr_text)
+  @qr = RQRCode::QRCode.new("https://sheltered-shore-8666.herokuapp.com/#{@next_qr_text}")
   erb :index
 end
 
 get "/" do
   @next_qr_text = list[0]
-  @qr = RQRCode::QRCode.new(@next_qr_text)
+  @qr = RQRCode::QRCode.new("https://sheltered-shore-8666.herokuapp.com/#{@next_qr_text}")
   erb :start
 end
 
